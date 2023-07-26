@@ -1,7 +1,7 @@
-def fact(n, a):
-    a = a * n
-    if n > 1:
-        return fact(n - 1, a)
+def fact(number, a):
+    a = a * number
+    if number > 1:
+        return fact(number - 1, a)
     else:
         return a
 

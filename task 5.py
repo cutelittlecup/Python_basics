@@ -1,6 +1,6 @@
 import random
 
-f = open('text.txt', 'w')
+f = open('text_example.txt', 'w')
 for i in range(10):
     x = random.randint(-100, 100)
     f.write(str(x) + '\n')
@@ -10,7 +10,7 @@ j = 0
 k = 0
 array = []
 
-f = open('text.txt', 'r')
+f = open('text_example.txt', 'r')
 
 for row in f:
     row = int(row)

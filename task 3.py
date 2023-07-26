@@ -24,6 +24,6 @@ class Piggy_bank:
 
 
 Uno = Piggy_bank(0, 20)
-Uno.get_money(21)
+Uno.get_money(22)
 Uno.check_balance()
 Uno.take_money(50)

@@ -1,7 +1,7 @@
 import random
 
 array = random.sample(range(1000), 10)
-print(f'Without sorting: {array}')
+print(f'Array without sorting: {array}')
 
 i = 0
 n = 0
@@ -15,4 +15,4 @@ while i < len(array) * (len(array) - 1) / 2:
         n = 0
     i += 1
 
-print(f'With sorting: {array}')
+print(f'Array with sorting: {array}')

@@ -1,10 +1,10 @@
-def calculator(num1, op, num2):
+def calculator(number1, operation, number2):
     operations = {'mod': '%', 'pow': '**', 'div': '//'}
     try:
         if op in operations:
-            result = eval(f'{num1} {operations[op]} {num2}')
+            result = eval(f'{number1} {operations[operation]} {number2}')
         else:
-            result = eval(f'{num1} {op} {num2}')
+            result = eval(f'{number1} {operation} {number2}')
     except ZeroDivisionError:
         result = "infinity"
     return result
