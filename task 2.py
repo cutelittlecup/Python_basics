@@ -8,4 +8,4 @@ def fact(n, a):
 
 n = int(input('Enter a number: '))
 
-print('Result:', fact(n, 1))
+print(f'Result: {fact(n, 1)}')

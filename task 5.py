@@ -20,7 +20,7 @@ for row in f:
         k += 1
     array.append(row)
 
-print('Max number:', max(array))
-print('Min number:', min(array))
-print('Number of even:', j)
-print('Number of odd:', k)
+print(f"Max number: {max(array)}")
+print(f"Min number: {min(array)}")
+print(f"Number of even: {j}")
+print(f"Number of odd: {k}")
