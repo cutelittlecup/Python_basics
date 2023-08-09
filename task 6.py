@@ -1,9 +1,10 @@
 def fibonacci(number_index):
-    number, last_number = 1, 0
+    number, last_number = 0, 1
+    if number_index == 0:
+        return 0
     for _ in range(number_index - 1):
-        new_number = number + last_number
-        number, last_number = new_number, number
-    return number
+        number, last_number = last_number, number + last_number
+    return last_number
 
 
 n = int(input('Enter a number: '))
