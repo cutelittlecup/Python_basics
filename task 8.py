@@ -7,12 +7,8 @@ BOOK_PATH = 'https://www.gutenberg.org/files/2638/2638-0.txt'
 
 
 def benchmark(func):
-    """
-    The decorator that outputs the time it took to execute the decorated function
-    """
-
+    """The decorator that outputs the time it took to execute the decorated function"""
     def wrapper(*args, **kwargs):
-
         time_start = time.time()
         func(*args, **kwargs)
         print(f'Function execution time: {time.time() - time_start} sec')
@@ -23,10 +19,7 @@ def benchmark(func):
 
 
 def logging(func):
-    """
-    The decorator that outputs the parameters with which the function was called
-    """
-
+    """The decorator that outputs the parameters with which the function was called"""
     def wrapper(*args, **kwargs):
         print(f'The function is called with parameters: {args}, {kwargs}')
         return func(*args, **kwargs)
@@ -35,10 +28,7 @@ def logging(func):
 
 
 def counter(func):
-    """
-    The decorator that counts and outputs the number of calls to the function being decorated
-    """
-
+    """The decorator that counts and outputs the number of calls to the function being decorated"""
     def wrapper(*args, **kwargs):
         wrapper.calls += 1
         print(f'The function is called {wrapper.calls} times')
@@ -51,11 +41,14 @@ def counter(func):
 @counter
 @logging
 @benchmark
-def word_count(word, url=BOOK_PATH):
+def word_count(word: str, url=BOOK_PATH) -> str:
     """
-    Function for counting the specified word on a html page
-    """
+    Function for counting the specified word on a html page.
 
+    :param word: word that need to counting
+    :param url: link of page with text
+    :return: comment about the number of occurrences word on the url
+    """
     raw = requests.get(url).text
 
     processed_book = re.sub('[\W]+' , ' ', raw).lower()
